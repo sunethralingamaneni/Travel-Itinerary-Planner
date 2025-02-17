@@ -1,0 +1,607 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #c2d6d6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header.site-header {
+
+  background-color: rgba(102, 153, 153);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.site-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header.site-header p {
+  font-size: 1.2rem;
+}
+
+
+
+
+/* Intro Section */
+.intro {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Ensure text is readable over the video */
+  overflow: hidden; /* Prevent overflow from video */
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1; /* Ensure content stays on top of the video */
+  padding: 20px;
+  max-width: 800px; /* Restrict content width for readability */
+}
+
+.intro-content h1 {
+  font-size: 3rem; /* Adjust the size as per your preference */
+  font-weight: bold; /* Optional: makes the font weight bold */
+}
+
+.intro-content p {
+  font-size: 1.2rem; /* Adjust this size for the paragraph */
+  line-height: 1.6; /* Optional: improves readability */
+}
+
+
+/* Video Background */
+.background-video {
+  position: absolute; /* Position it absolutely within the section */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretch to cover the width */
+  height: 100%; /* Stretch to cover the height */
+  object-fit: cover; /* Makes sure the video covers the entire section */
+  z-index: -1; /* Ensures the video is behind the content */
+  filter: brightness(0.8); /* Optional: Adjust brightness for better text readability */
+}
+
+.scroll-button {
+  background-color: #75a3a3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.scroll-button:hover {
+  background-color: #595959;
+}
+
+
+/* Main Section */
+.features {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Feature Container */
+.features {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Feature Container */
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Reverse Layout */
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text Styling */
+.text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background-color: #e8ffcc;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Image Styling */
+.image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image img {
+    width: 200px;  /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the square without distortion */
+    display: block;
+    border-radius: 5px; /* Optional: To add rounded corners */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature.reverse {
+        flex-direction: column;
+    }
+
+    .text, .image {
+        max-width: 100%;
+    }
+}
+
+
+
+#add-to-itinerary {
+    text-align: center;
+    margin: 50px auto; /* Centers the section */
+    padding: 20px;
+    max-width: 600px; /* Limits width for better readability */
+    background-color: #e0ebeb; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a clean look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+margin-bottom: 10px; 
+}
+
+#add-to-itinerary h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#add-to-itinerary p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Create Trip Section */
+#create-trip-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Centers it vertically */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px; 
+
+}
+
+#create-trip-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#trip-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #e0ebeb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+#trip-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#trip-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #669999;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#trip-form button:hover {
+    background-color: #527a7a;
+}
+
+
+/* Itinerary Section */
+/* Itinerary Section Styling */
+#itinerary-section {
+    text-align: center;
+    margin: 20px auto; /* Centering the section */
+    padding: 50px 75px;
+    max-width: 500px; /* Adjust width for better readability */
+    background-color: #e0ebeb; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Section Heading */
+#itinerary-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#itinerary-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+}
+
+/* Labels */
+#itinerary-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+/* Inputs and Select */
+#itinerary-form input,
+#itinerary-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #e0ebeb;
+}
+
+/* Button Styling */
+#itinerary-form button {
+    background-color: #669999;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#itinerary-form button:hover {
+    background-color: #527a7a;
+}
+
+/* Itinerary List */
+
+/* Itinerary Container */
+#itinerary-container {
+    background-color: #e0ebeb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto; /* Center the container and add spacing from top and bottom */
+    max-width: 800px; /* Restrict width to avoid it stretching too far on large screens */
+    width: 100%; /* Ensure it takes the full width until max-width */
+}
+
+/* Heading "My Itinerary" */
+#itinerary-container h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px; /* Space between heading and content */
+}
+
+#itinerary-items {
+    margin-top: 20px; /* Space between the heading and the list */
+}
+
+/* If there are no items in the itinerary */
+#itinerary-items:empty::before {
+    content: "No items in the itinerary";
+    color: #888;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center; /* Center the message */
+    padding: 10px 0;
+    display: block; /* Ensure it occupies the full width */
+}
+
+
+.itinerary-list {
+  flex: 1 1 45%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-list ul {
+  list-style-type: none;
+}
+
+/* Trip Item */
+.trip-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.trip-item:hover {
+    background-color: #eef7f7;
+}
+
+/* Trip Name */
+.trip-name {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #669999;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eef7f7;
+}
+
+.trip-name:hover {
+  text-decoration: underline;
+}
+
+/* Trip Details */
+.trip-details {
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #eef7f7;
+  border-radius: 5px;
+}
+
+.trip-item.active .trip-details {
+    display: block;
+}
+
+/* Day & Activity Styling */
+.trip-details li {
+  padding: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Visited Checkbox */
+.visited-checkbox {
+  margin-top: 10px;
+}
+
+/* Notes Section */
+.notes {
+  display: none;
+  margin-top: 10px;
+}
+
+.notes label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.notes textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Delete Button */
+.delete-trip {
+  background-color: #5c8a8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.delete-trip:hover {
+  background-color: #334d4d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .itinerary-form,
+  .itinerary-list {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* Styling for Traveler's Loved Spots section */
+#loved-spots-section {
+    background-color: #e0ebeb; /* White background for the section */
+    padding: 40px 0; /* Add padding for spacing */
+    text-align: center; /* Center-align the section text */
+    margin: 20px 0; /* Margin to separate from other sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a subtle lift */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#loved-spots-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Styling for the container that holds the spots */
+.loved-spots-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the images evenly */
+    gap: 20px; /* Space between the images */
+    flex-wrap: wrap; /* Allow wrapping in smaller screen sizes */
+    max-width: 100%; /* Ensure the container uses the available width */
+    margin: 0 25px; /* Left and right margin of 25px for spacing */
+}
+
+/* Styling for each individual loved spot */
+.loved-spot {
+    position: relative; /* To position the name text over the image */
+    width: 16%; /* Reduced width for the images (previously 18%) */
+    min-width: 130px; /* Reduced min-width for better sizing */
+    height: 220px; /* Reduced height for a more compact image */
+    overflow: hidden; /* Prevent the image from spilling out of the container */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.loved-spot img {
+    width: 100%; /* Make image fill the container */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+/* Styling for the name text on top of the image */
+.spot-name {
+    position: absolute;
+    bottom: 10px; /* Place text at the bottom */
+    left: 10px; /* Align text to the left */
+    transform: translateX(0); /* Remove centering transformation */
+    color: white; /* White text color */
+    font-size: 1rem; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
+    padding: 5px 10px; /* Padding around the name */
+    border-radius: 5px; /* Rounded corners for the text background */
+    background-color: rgba(194, 214, 214,0.8);
+}
+
+
+
+/* Trusted Partners Section */
+
+.trusted-partners-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trusted-partners-section h2 {
+    margin-bottom: 20px; /* Increased space below heading */
+    font-size: 1.8rem; /* Slightly larger font */
+    color: #333;
+}
+
+/* Scrolling Container */
+.trusted-partners-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Moving Text */
+.trusted-partners {
+    display: flex;
+    gap: 20px;
+    animation: scrollLoop 20s linear infinite;
+}
+
+.partner {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #669999;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Scrolling Effect */
+@keyframes scrollLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.trusted-partners::after {
+    content: "";
+    display: block;
+    min-width: fit-content;
+}
+
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  margin-top: auto;
+}
