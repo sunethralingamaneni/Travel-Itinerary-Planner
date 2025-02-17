@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prism Trails - Travel Itinerary Planner</title>
+  <link rel="stylesheet" href="wadcs.css">
+</head>
+<body>
+
+<!-- Main Site Header -->
+<header class="site-header">
+  <h1>Prism Trails</h1>
+  <p>Your personalized travel planner for seamless adventures.</p>
+</header>
+
+<!-- Intro Section -->
+<section class="intro" id="intro">
+
+ <video autoplay muted loop playsinline class="background-video">
+    <source src="file:///C:/Users/Sunethra/Downloads/2169880-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+
+
+ <div class="intro-content">
+
+    <h1>Your Next Adventure Starts Here</h1> <br><br>
+    <p>
+      Prism Trails helps you craft, personalize, and organize your travel plans effortlessly. Whether it's a vacation, a work trip, or an everyday journey, we've got you covered!
+    </p><br>
+    <button class="scroll-button" onclick="scrollToItinerary()">Get Started</button>
+  </div>
+</section>
+
+
+
+    <section class="features">
+        <div class="feature">
+            <div class="text">
+                <h2><span class="highlight">The most optimal</span></h2>
+                <p>"Craft your perfect itinerary with Prism Trails. Maximize your travel experience with the most efficient itineraries. Tailor your journey to save time, money, and energy while getting the most out of every stop."</p>
+            </div>
+            <div class="image">
+                <img src="file:///C:/Users/Sunethra/OneDrive/Pictures/Screenshots%201/Screenshot%202025-02-02%20120658.png" alt="Trip Planning Illustration">
+            </div>
+        </div>
+
+        <div class="feature reverse">
+            <div class="image">
+                <img src="file:///C:/Users/Sunethra/OneDrive/Pictures/Screenshots%201/Screenshot%202025-02-02%20121258.png" alt="Explore Insights">
+            </div>
+            <div class="text">
+                <h2><span class="highlight">Get Inspired</span></h2>
+                <p>"Explore new destinations and exciting ideas to kickstart your journey. Our community and expert suggestions will help you find your next adventure."</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="text">
+                <h2><span class="highlight">One Seamless Travel Experience</span></h2>
+                <p>"Easily plan, book, and share your entire trip in one place. With everything in one spot, you can focus on enjoying your travel with confidence."</p>
+            </div>
+            <div class="image">
+                <img src="file:///C:/Users/Sunethra/OneDrive/Pictures/Screenshots%201/Screenshot%202025-02-02%20122415.png" alt="Tailored Experiences">
+            </div>
+        </div>
+
+        <div class="feature reverse">
+            <div class="image">
+                <img src="file:///C:/Users/Sunethra/OneDrive/Pictures/Screenshots%201/Screenshot%202025-02-02%20121429.png" alt="Smart Recommendations">
+            </div>
+            <div class="text">
+                <h2><span class="highlight">Share Your Memories</span></h2>
+                <p>"Document your journey and share your experiences with others. Whether publicly or privately, keep your travel memories alive and inspire fellow travelers."</p>
+            </div>
+        </div>
+    </section>
+
+<section id="add-to-itinerary">
+    <h2> ⋆. 𐙚 ˚  Add to Your Itinerary ˎˊ˗</h2>
+    <p>This is where it starts. Get the planning started!</p>
+</section>
+
+<!-- Create Trip Section -->
+<section id="create-trip-section">
+    <h2>Create a Trip</h2>
+    <form id="trip-form">
+        <input type="text" id="trip-name" placeholder="Trip Name" required>
+        <button type="submit">Create Trip</button>
+    </form>
+</section>
+
+<!-- Add Activity Section -->
+<section id="itinerary-section">
+    <h2>Add an Activity</h2>
+    <form id="itinerary-form">
+        
+        <!-- Trip Selection -->
+        <label for="trip-select">Select Trip:</label>
+        <select id="trip-select" required>
+            <option value="">Select Trip</option>
+        </select>
+        
+        <!-- Day Input -->
+        <label for="day">Day:</label>
+        <input type="text" id="day" placeholder="Day (e.g., Day 1)" required>
+        
+        <!-- Destination Input -->
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter Destination" required>
+        
+        <!-- Activity Input -->
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" placeholder="Enter Activity" required>
+        
+        <!-- Date Input -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        
+        <!-- Time Input -->
+        <label for="time">Time (Optional):</label>
+        <input type="time" id="time">
+        
+        <!-- Submit Button -->
+        <button type="submit">Add Activity</button>
+    
+    </form>
+</section>
+
+<!-- Itinerary List -->
+<section id="itinerary-container">
+    <h2>My Itinerary</h2>
+    <div id="itinerary-items"></div>
+</section>
+
+
+<!-- Traveler's Loved Spots Section -->
+<section id="loved-spots-section">
+    <h2>Traveler's Loved Spots</h2>
+    <div class="loved-spots-container">
+        <div class="loved-spot">
+            <img src="file:///C:/Users/Sunethra/Downloads/Boston-Common-788x537.webp" alt="Place 1">
+            <div class="spot-name">Boston</div>
+        </div>
+        <div class="loved-spot">
+            <img src="file:///C:/Users/Sunethra/Downloads/paris.jpg" alt="Place 2">
+            <div class="spot-name">Paris</div>
+        </div>
+        <div class="loved-spot">
+            <img src="file:///C:/Users/Sunethra/Downloads/nicholas-doherty-l81GuxMKOHw-unsplash.webp" alt="Place 3">
+            <div class="spot-name">Tokyo</div>
+        </div>
+        <div class="loved-spot">
+            <img src="file:///C:/Users/Sunethra/Downloads/Nyhavn-Old-Harbor-Copenhagen-Denmark-scaled.jpg" alt="Place 4">
+            <div class="spot-name">Copenhagen</div>
+        </div>
+        <div class="loved-spot">
+            <img src="file:///C:/Users/Sunethra/Downloads/TAL-dubai-DUBAITG1123-17390625954c4be3902a440d8fffde67.jpg" alt="Place 5">
+            <div class="spot-name">Dubai</div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Trusted Partners Section -->
+<div class="trusted-partners-section">
+    <h2>Trusted Partners</h2>
+    <div class="trusted-partners-container">
+        <div class="trusted-partners">
+            <span class="partner">Traveler's Club</span>
+            <span class="partner">Global Explorers</span>
+            <span class="partner">Wayfarers United</span>
+            <span class="partner">Nomad Network</span>
+            <span class="partner">Adventure Seekers</span>
+            <span class="partner">HostelWorld</span>
+            <span class="partner">Holafly</span>
+            <span class="partner">Safety Wing</span>
+            <span class="partner">FREETOUR.com</span>
+            <span class="partner">airalo</span>
+
+            <span class="partner">Traveler's Club</span>
+            <span class="partner">Global Explorers</span>
+            <span class="partner">Wayfarers United</span>
+            <span class="partner">Nomad Network</span>
+            <span class="partner">Adventure Seekers</span>
+            <span class="partner">HostelWorld</span>
+            <span class="partner">Holafly</span>
+            <span class="partner">Safety Wing</span>
+            <span class="partner">FREETOUR.com</span>
+            <span class="partner">airalo</span>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2025 Prism Trails. Explore, plan, and relive your travels with us.</p>
+</footer>
+
+<script src="wadcs.js"></script>
+</body>
+</html>
