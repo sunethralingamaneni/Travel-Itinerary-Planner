@@ -162,3 +162,18 @@ function scrollToItinerary() {
         createTripSection.scrollIntoView({ behavior: "smooth" });
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let userInfo = document.getElementById("user-info");
+    let username = localStorage.getItem("loggedInUser");
+
+    if (username) {
+        userInfo.innerHTML = `<span>Welcome, ${username}</span> | <a href="#" onclick="logout()">Logout</a>`;
+    }
+});
+
+function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.reload(); // Refresh the page to update navbar
+}
